@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 import Navbar from "./components/Navbar";
 import ScrollTopButton from "./components/ScrollTopButton";
 
@@ -34,6 +35,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="antialiased scroll-smooth">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SQ3VEFZZXC"
+          strategy="afterInteractive"
+        />
+        <Script id="google-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SQ3VEFZZXC');
+          `}
+        </Script>
         <Navbar />
         {children}
         <ScrollTopButton />
