@@ -34,7 +34,7 @@ export default function ServicesSection() {
 
           {/* زر طلب عرض سعر */}
           <a href="#contact">
-            <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-5 rounded-lg shadow-md transition-all">
+            <button id="order-submit" className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-5 rounded-lg shadow-md transition-all">
               اطلب عرض سعر
             </button>
           </a>
